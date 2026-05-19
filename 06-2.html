@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>스프커리 가이드 - Bootstrap 실전</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <!-- Bootstrap JS (Popper 포함) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <style>
+        .hero-section {
+            /* 뷰포트 높이 사용 */
+            height: 60vh;
+            background-color: #fff3cd;
+        }
+        .custom-card-img {
+            height: 200px;
+            object-fit: cover;
+            background-color: #e9ecef;
+        }
+        /* body 전체가 화면 높이를 다 채우도록 설정 (Footer 하단 고정을 위해) */
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar: sticky-top (스크롤 시 상단 고정), navbar-expand-lg (반응형 메뉴) -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow-sm">
+        <div class="container-fluid">
+            <a class="navbar-brand fw-bold text-warning" href="#">🍲 스프커리 가이드</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <!-- ms-auto: margin-start: auto 로 오른쪽 정렬 -->
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">홈</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">소개</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#menu">메뉴 추천</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section: Flexbox(d-flex, flex-column, justify-content-center, align-items-center) 활용 -->
+    <header class="hero-section d-flex flex-column justify-content-center align-items-center text-center p-5 position-relative">
+        <h1 class="display-4 fw-bold mb-3 text-dark">삿포로의 맛, 스프커리</h1>
+        <p class="lead mb-4 text-secondary">향신료의 깊은 풍미와 신선한 채소가 어우러진 완벽한 한 그릇을 만나보세요.</p>
+        
+        <!-- Button & Badge (position-relative / absolute 활용) -->
+        <button type="button" class="btn btn-warning btn-lg position-relative shadow" data-bs-toggle="modal" data-bs-target="#infoModal">
+            이벤트 확인하기
+            <span class="position-absolute top-0 start-100 translate-middle p-2 bg-danger border border-light rounded-circle">
+                <span class="visually-hidden">New alerts</span>
+            </span>
+        </button>
+    </header>
+
+    <!-- Main Content: 반응형 Grid (row, col) & Cards -->
+    <main class="container my-5 flex-grow-1" id="menu">
+        <div class="row text-center mb-4">
+            <div class="col">
+                <h2 class="fw-bold">인기 메뉴 Top 3</h2>
+                <hr class="w-25 mx-auto border-3 border-warning">
+            </div>
+        </div>
+
+        <!-- row-cols-1 (모바일), row-cols-md-2 (태블릿), row-cols-lg-3 (데스크탑) 적응형 레이아웃 -->
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+            <!-- Card 1 -->
+            <div class="col">
+                <!-- h-100: 높이 맞춤, position-relative: 뱃지 위치 기준점 -->
+                <div class="card h-100 shadow-sm border-0 position-relative">
+                    <span class="badge bg-danger position-absolute top-0 start-0 m-3 z-1 px-3 py-2">BEST</span>
+                    <div class="custom-card-img d-flex justify-content-center align-items-center text-secondary display-1 bg-light">🍗</div>
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title fw-bold">치킨 채소 스프커리</h5>
+                        <p class="card-text text-muted">부드러운 닭다리와 10가지 이상의 신선한 구운 채소가 듬뿍 들어간 시그니처 메뉴.</p>
+                        <!-- mt-auto: 하단으로 밀어내기, flex로 양쪽 정렬 -->
+                        <div class="mt-auto d-flex justify-content-between align-items-center pt-3 border-top">
+                            <span class="fw-bold fs-5 text-dark">15,000원</span>
+                            <button class="btn btn-outline-warning btn-sm">장바구니 담기</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 2 -->
+            <div class="col">
+                <div class="card h-100 shadow-sm border-0">
+                    <div class="custom-card-img d-flex justify-content-center align-items-center text-secondary display-1 bg-light">🥦</div>
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title fw-bold">하루야채 스프커리</h5>
+                        <p class="card-text text-muted">고기 없이 채소 본연의 단맛과 깔끔한 국물 맛을 즐길 수 있는 비건 추천 메뉴.</p>
+                        <div class="mt-auto d-flex justify-content-between align-items-center pt-3 border-top">
+                            <span class="fw-bold fs-5 text-dark">13,000원</span>
+                            <button class="btn btn-outline-warning btn-sm">장바구니 담기</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 3 -->
+            <div class="col">
+                <div class="card h-100 shadow-sm border-0">
+                    <div class="custom-card-img d-flex justify-content-center align-items-center text-secondary display-1 bg-light">🦐</div>
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title fw-bold">해산물 스프커리</h5>
+                        <p class="card-text text-muted">새우, 오징어, 조개 등 해산물의 시원한 맛이 향신료와 만나 환상적인 풍미를 냅니다.</p>
+                        <div class="mt-auto d-flex justify-content-between align-items-center pt-3 border-top">
+                            <span class="fw-bold fs-5 text-dark">17,000원</span>
+                            <button class="btn btn-outline-warning btn-sm">장바구니 담기</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Info Section: Flex alignment -->
+    <section class="bg-light py-5" id="about">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-5 mb-4 mb-md-0 d-flex justify-content-center">
+                    <div class="bg-white shadow-lg rounded-circle d-flex align-items-center justify-content-center border border-warning border-5" style="width: 250px; height: 250px;">
+                        <h3 class="text-center text-warning fw-bold m-0">건강한<br>한끼</h3>
+                    </div>
+                </div>
+                <div class="col-md-7">
+                    <h2 class="fw-bold mb-3">스프커리란?</h2>
+                    <p class="lead text-muted">일본 홋카이도 삿포로시에서 유래한 카레 요리로, 일반적인 걸쭉한 카레와 달리 국물이 맑고 묽은 것이 특징입니다.</p>
+                    <!-- List Group 컴포넌트 -->
+                    <ul class="list-group list-group-flush mt-4">
+                        <li class="list-group-item bg-transparent border-0 px-0 mb-2">
+                            <span class="badge bg-success rounded-pill me-2">Point 1</span> 다채로운 채소 튀김 토핑
+                        </li>
+                        <li class="list-group-item bg-transparent border-0 px-0 mb-2">
+                            <span class="badge bg-success rounded-pill me-2">Point 2</span> 닭 뼈와 채소로 우려낸 진한 향신료 육수
+                        </li>
+                        <li class="list-group-item bg-transparent border-0 px-0">
+                            <span class="badge bg-success rounded-pill me-2">Point 3</span> 취향에 맞게 단계별로 조절 가능한 매운맛
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer: mt-auto 를 주어 flex-container(body) 안에서 하단에 위치하도록 설정 -->
+    <footer class="bg-dark text-white text-center py-4 mt-auto">
+        <!-- 반응형 flex-row/column 전환 -->
+        <div class="container d-flex justify-content-between align-items-center flex-column flex-md-row">
+            <p class="mb-0 text-secondary">&copy; 2026 스프커리 가이드. All rights reserved.</p>
+            <div class="mt-3 mt-md-0 d-flex gap-3">
+                <a href="#" class="text-secondary text-decoration-none hover-white">이용약관</a>
+                <a href="#" class="text-secondary text-decoration-none hover-white">개인정보처리방침</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal Component -->
+    <div class="modal fade" id="infoModal" tabindex="-1" aria-labelledby="infoModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content border-0 shadow-lg">
+                <div class="modal-header bg-warning text-dark border-0">
+                    <h5 class="modal-title fw-bold" id="infoModalLabel">🎉 깜짝 이벤트 안내</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-4 text-center">
+                    <h4 class="text-danger fw-bold mb-3">신규 가입 20% 할인!</h4>
+                    <p class="text-muted mb-0">지금 바로 회원가입 하시고,<br>모든 메뉴에 적용 가능한 할인 쿠폰을 받으세요.</p>
+                </div>
+                <div class="modal-footer border-0 justify-content-center bg-light">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">다음에 받기</button>
+                    <button type="button" class="btn btn-danger px-4">쿠폰 받기</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
