@@ -163,6 +163,22 @@ button,
   border-left: 0.35rem solid #d97706;
 }
 
+.site-footer {
+  border-top: 1px solid rgba(120, 74, 36, 0.14);
+  background:
+    linear-gradient(180deg, rgba(255, 253, 247, 0.78), rgba(247, 239, 227, 0.94)),
+    radial-gradient(circle at 90% 0%, rgba(217, 119, 6, 0.14), transparent 18rem);
+}
+
+.site-footer a {
+  color: #6b3d1d;
+  transition: color 160ms ease, transform 160ms ease;
+}
+
+.site-footer a:hover {
+  color: #9a3412;
+}
+
 @media (max-width: 767px) {
   body {
     background:
