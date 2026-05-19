@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>float position</title>
+    <style>
+        .float-box{
+        width:100px; 
+        height:100px; 
+        background-color:
+         aquamarine;
+        float:left
+        }
+        .float-box-right{
+            float:right;
+        }
+        .container{
+            border: 1px solid chocolate;
+        }
+        .static{
+            background-color: gray;
+        }
+        .box{
+            width:100px;
+            height:100px;
+        }
+        .relative{
+            position: relative;
+            background-color: blueviolet;
+            top:12px;
+            left:12px;
+        }
+        .absolute{
+            position: absolute;
+            top:12px;
+            left:12px;
+            background-color: pink;
+        }
+        .fixed{
+            position:fixed;
+            background-color: chartreuse;
+            top:24px;
+            left:24px;
+
+        }
+    </style>
+</head>
+<body>
+    <h1>Float</h1>
+    <hr>
+    <div>
+        <div class="float-box" >박스1</div>
+        <div class="float-box" >박스2</div>
+        <div class="float-box float-box-right">박스3</div>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque ut maxime ex neque perspiciatis! Rerum vero architecto modi quas minus natus eveniet eius sunt ipsa, ipsam voluptates commodi fugit earum.
+        </div>
+        <div class="container" style="overflow: hidden;">
+        <div style="clear:both"></div>
+        <div class="float-box" >박스a</div>
+        <div class="float-box" >박스b</div>
+        <div class="float-box float-box-right">박스c</div>
+    </div>
+    </div>
+    
+    <hr>
+    <br>
+    <h1>Position</h1>
+    <div style="position: sticky;
+    width:100%;
+    height:24px;
+    top:48px;
+    background-color: blanchedalmond;
+    z-index: 999;">sticky</div>
+    <div style="position: relative;">
+        <div class="box static">
+            static
+            <div class="box absolute">absolute[1]</div>
+        </div>
+        <div class="box relative">
+            relative
+        <div class="box absolute">absolute[2]</div>
+    </div>
+        <div class="box absolute">
+            absolute
+            <div class="box absolute">absolute[3]</div>
+        </div>
+        <div class="box fixed">
+            fixed
+            <div class="box absolute">absolute[4]</div>
+    </div>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia rerum fugiat omnis labore corrupti, necessitatibus voluptate minima amet sint suscipit cum veritatis. Vitae consectetur minima accusamus maxime sequi quod, molestiae tenetur voluptas quidem iure. Est beatae, ratione ipsum quis possimus accusamus eos non eaque! Dolores quia quo, dolorum esse ut possimus distinctio consequuntur velit deleniti ipsam minus dignissimos tenetur provident unde accusantium totam. Voluptatibus inventore minus quod quos aut id non ratione enim et ipsa a, exercitationem architecto illo omnis laboriosam ipsum dicta doloribus excepturi, perferendis iste incidunt nemo itaque doloremque nostrum? Quam sapiente est cum perferendis exercitationem voluptas numquam.lorem
+    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro saepe animi quae reprehenderit praesentium dolorum nobis impedit ullam ab repudiandae molestiae, doloribus dolor itaque rerum dolores dicta tempore pariatur quo placeat autem repellat dolorem eos repellendus! Ipsum itaque repellat obcaecati, aliquam officia distinctio quo eius laudantium dolores aliquid exercitationem molestias sunt corrupti velit consequuntur incidunt dolor ut eveniet nobis explicabo aspernatur pariatur modi totam. Nesciunt rerum qui error facere asperiores accusantium voluptatibus fugit suscipit, dignissimos sunt eum? Nisi pariatur minima aliquid quis nostrum iusto reprehenderit doloremque nobis a possimus delectus beatae accusamus laboriosam maxime, eius veritatis quo vitae aperiam id!Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia rerum fugiat omnis labore corrupti, necessitatibus voluptate minima amet sint suscipit cum veritatis. Vitae consectetur minima accusamus maxime sequi quod, molestiae tenetur voluptas quidem iure. Est beatae, ratione ipsum quis possimus accusamus eos non eaque! Dolores quia quo, dolorum esse ut possimus distinctio consequuntur velit deleniti ipsam minus dignissimos tenetur provident unde accusantium totam. Voluptatibus inventore minus quod quos aut id non ratione enim et ipsa a, exercitationem architecto illo omnis laboriosam ipsum dicta doloribus excepturi, perferendis iste incidunt nemo itaque doloremque nostrum? Quam sapiente est cum perferendis exercitationem voluptas numquam.lorem
+    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro saepe animi quae reprehenderit praesentium dolorum nobis impedit ullam ab repudiandae molestiae, doloribus dolor itaque rerum dolores dicta tempore pariatur quo placeat autem repellat dolorem eos repellendus! Ipsum itaque repellat obcaecati, aliquam officia distinctio quo eius laudantium dolores aliquid exercitationem molestias sunt corrupti velit consequuntur incidunt dolor ut eveniet nobis explicabo aspernatur pariatur modi totam. Nesciunt rerum qui error facere asperiores accusantium voluptatibus fugit suscipit, dignissimos sunt eum? Nisi pariatur minima aliquid quis nostrum iusto reprehenderit doloremque nobis a possimus delectus beatae accusamus laboriosam maxime, eius veritatis quo vitae aperiam id!Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia rerum fugiat omnis labore corrupti, necessitatibus voluptate minima amet sint suscipit cum veritatis. Vitae consectetur minima accusamus maxime sequi quod, molestiae tenetur voluptas quidem iure. Est beatae, ratione ipsum quis possimus accusamus eos non eaque! Dolores quia quo, dolorum esse ut possimus distinctio consequuntur velit deleniti ipsam minus dignissimos tenetur provident unde accusantium totam. Voluptatibus inventore minus quod quos aut id non ratione enim et ipsa a, exercitationem architecto illo omnis laboriosam ipsum dicta doloribus excepturi, perferendis iste incidunt nemo itaque doloremque nostrum? Quam sapiente est cum perferendis exercitationem voluptas numquam.lorem
+    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro saepe animi quae reprehenderit praesentium dolorum nobis impedit ullam ab repudiandae molestiae, doloribus dolor itaque rerum dolores dicta tempore pariatur quo placeat autem repellat dolorem eos repellendus! Ipsum itaque repellat obcaecati, aliquam officia distinctio quo eius laudantium dolores aliquid exercitationem molestias sunt corrupti velit consequuntur incidunt dolor ut eveniet nobis explicabo aspernatur pariatur modi totam. Nesciunt rerum qui error facere asperiores accusantium voluptatibus fugit suscipit, dignissimos sunt eum? Nisi pariatur minima aliquid quis nostrum iusto reprehenderit doloremque nobis a possimus delectus beatae accusamus laboriosam maxime, eius veritatis quo vitae aperiam id!Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia rerum fugiat omnis labore corrupti, necessitatibus voluptate minima amet sint suscipit cum veritatis. Vitae consectetur minima accusamus maxime sequi quod, molestiae tenetur voluptas quidem iure. Est beatae, ratione ipsum quis possimus accusamus eos non eaque! Dolores quia quo, dolorum esse ut possimus distinctio consequuntur velit deleniti ipsam minus dignissimos tenetur provident unde accusantium totam. Voluptatibus inventore minus quod quos aut id non ratione enim et ipsa a, exercitationem architecto illo omnis laboriosam ipsum dicta doloribus excepturi, perferendis iste incidunt nemo itaque doloremque nostrum? Quam sapiente est cum perferendis exercitationem voluptas numquam.lorem
+    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro saepe animi quae reprehenderit praesentium dolorum nobis impedit ullam ab repudiandae molestiae, doloribus dolor itaque rerum dolores dicta tempore pariatur quo placeat autem repellat dolorem eos repellendus! Ipsum itaque repellat obcaecati, aliquam officia distinctio quo eius laudantium dolores aliquid exercitationem molestias sunt corrupti velit consequuntur incidunt dolor ut eveniet nobis explicabo aspernatur pariatur modi totam. Nesciunt rerum qui error facere asperiores accusantium voluptatibus fugit suscipit, dignissimos sunt eum? Nisi pariatur minima aliquid quis nostrum iusto reprehenderit doloremque nobis a possimus delectus beatae accusamus laboriosam maxime, eius veritatis quo vitae aperiam id!
+
+</body>
+</html>
