@@ -3,9 +3,90 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Flex</title>
+    <style>
+        *{
+            margin:0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .flex-container{
+            display: flex;
+            width: 100%; 
+            padding: 24px; 
+        }
+        .flex-container>*{
+            width: 48px;
+            height: 48px;
+            border: 2px solid palegreen;
+            /* margin: 24px; */
+        }
+        .direction-column{
+            flex-direction: column;
+        }
+    </style>
 </head>
 <body>
-    
+    <!-- flex box -->
+    <div 
+    class="flex-container">
+        <!-- flex item : inline block 무시 -->
+         <div>div</div>
+         <span>span</span>
+         <p>p</p>
+    </div>
+    <div 
+    class="flex-container"
+    style="justify-content: flex-end;">
+        <!-- flex item : inline block 무시 -->
+         <div>div</div>
+         <span>span</span>
+         <p>p</p>
+    </div>
+    <div 
+    class="flex-container"
+    style="justify-content: center;">
+        <!-- flex item : inline block 무시 -->
+         <div>div</div>
+         <span>span</span>
+         <p>p</p>
+    </div>
+    <div 
+    class="flex-container"
+    style="justify-content: space-evenly;">
+        <!-- flex item : inline block 무시 -->
+         <div>div</div>
+         <span>span</span>
+         <p>p</p>
+    </div>
+    <div 
+    class="flex-container"
+    style="justify-content: space-between;">
+        <!-- flex item : inline block 무시 -->
+         <div>div</div>
+         <span>span</span>
+         <p>p</p>
+    </div>
+    <div 
+    class="flex-container"
+    style="justify-content: space-around;">
+        <!-- flex item : inline block 무시 -->
+         <div>div</div>
+         <span>span</span>
+         <p>p</p>
+    </div>
+    <hr>
+    <div 
+    class="direction-column flex-container"
+    style="justify-content: start;">
+        <!-- flex item : inline block 무시 -->
+         <div>div</div>
+         <span>span</span>
+         <p>p</p>
+    </div>
+    <!-- cross axis -> align items -->
+     <!-- flex wrap + row/column item 배치 -->
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
 </body>
 </html>
