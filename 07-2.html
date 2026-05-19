@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="ko" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>일식 돈까스 가이드 - Tailwind 실전</title>
+    <!-- Tailwind CSS v4 CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style type="text/tailwindcss">
+        /* v4 테마 커스터마이징 예시 */
+        @theme {
+            --color-primary: #166534;
+        }
+        /* 커스텀 유틸리티 클래스 */
+        @layer utilities {
+            .flex-center {
+                @apply flex items-center justify-center;
+            }
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans flex flex-col min-h-screen pt-16">
+
+    <!-- Navbar: fixed (고정), flexbox, backdrop-blur (배경 블러 효과) -->
+    <nav class="fixed top-0 w-full bg-white/80 backdrop-blur-md shadow-sm z-50 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="#" class="text-2xl font-bold text-green-700 flex items-center gap-2">
+                        <span class="text-3xl">🍱</span> 카츠야
+                    </a>
+                </div>
+                <!-- Desktop Menu: md:flex (테블릿 이상에서 flex), space-x-8 (요소 간 가로 간격) -->
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="#" class="text-slate-600 hover:text-green-600 font-medium transition-colors">홈</a>
+                    <a href="#about" class="text-slate-600 hover:text-green-600 font-medium transition-colors">돈까스란?</a>
+                    <a href="#menu" class="text-slate-600 hover:text-green-600 font-medium transition-colors">메뉴 안내</a>
+                    <a href="#contact" class="bg-green-600 text-white px-5 py-2 rounded-full hover:bg-green-700 transition-colors shadow-md">예약하기</a>
+                </div>
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center">
+                    <button class="text-slate-700 hover:text-green-600 focus:outline-none">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section: relative (자식 요소의 absolute 기준점), flexbox -->
+    <header class="relative bg-stone-800 overflow-hidden">
+        <!-- 배경 효과: absolute로 덮기 -->
+        <div class="absolute inset-0">
+            <div class="absolute inset-0 bg-gradient-to-r from-stone-900 to-green-900/80"></div>
+        </div>
+        <div class="relative max-w-7xl mx-auto py-24 px-4 sm:py-32 sm:px-6 lg:px-8 flex flex-col items-center text-center">
+            <h1 class="text-4xl font-extrabold tracking-tight text-white sm:text-5xl lg:text-6xl mb-6 leading-tight">
+                바삭함의 미학,<br class="md:hidden"> 정통 일식 돈까스
+            </h1>
+            <p class="mt-4 max-w-3xl text-xl text-stone-300">
+                두툼한 고기와 생빵가루, 그리고 장인의 시간.<br>한 입 베어 무는 순간 퍼지는 육즙의 향연을 경험해보세요.
+            </p>
+            <div class="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
+                <!-- 버튼 디자인, hover 이펙트, transform(크기 변화) -->
+                <a href="#menu" class="inline-flex items-center justify-center px-8 py-3 border border-transparent text-base font-bold rounded-lg text-stone-900 bg-amber-400 hover:bg-amber-300 shadow-lg transform hover:-translate-y-1 transition-all duration-200">
+                    메뉴 보기
+                </a>
+                
+                <!-- 핑 애니메이션과 absolute를 활용한 알림 뱃지 -->
+                <div class="relative inline-block w-full sm:w-auto">
+                    <a href="#" class="inline-flex items-center justify-center px-8 py-3 border border-white text-base font-medium rounded-lg text-white hover:bg-white/10 transition-colors w-full sm:w-auto">
+                        오픈 기념 이벤트
+                    </a>
+                    <span class="absolute -top-2 -right-2 flex h-4 w-4">
+                        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-rose-400 opacity-75"></span>
+                        <span class="relative inline-flex rounded-full h-4 w-4 bg-rose-500"></span>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- About Section: 반응형 Layout (모바일: 위아래 / 데스크탑: 좌우) -->
+    <section id="about" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="lg:flex lg:items-center lg:justify-between gap-16">
+                <!-- 텍스트 영역 -->
+                <div class="lg:w-1/2">
+                    <h2 class="text-3xl font-extrabold text-slate-900 sm:text-4xl mb-4">
+                        일식 돈까스의 핵심
+                    </h2>
+                    <p class="text-lg text-slate-600 mb-8">
+                        경양식 돈까스와 달리 두툼한 원육을 사용하여 육즙을 가두고, 굵은 생빵가루를 입혀 튀겨내어 이른바 '겉바속촉'의 정수를 보여줍니다.
+                    </p>
+                    
+                    <!-- 특징 리스트: flex 적용 -->
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 flex-center h-12 w-12 rounded-xl bg-red-50 text-red-500 text-2xl">
+                                🥩
+                            </div>
+                            <div class="ml-4">
+                                <h3 class="text-lg font-bold text-slate-900">최상급 100시간 숙성육</h3>
+                                <p class="mt-1 text-slate-500">저온에서 교차 숙성하여 돼지고기 본연의 풍미를 끌어올리고 극강의 부드러운 식감을 자랑합니다.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 flex-center h-12 w-12 rounded-xl bg-amber-50 text-amber-500 text-2xl">
+                                🍞
+                            </div>
+                            <div class="ml-4">
+                                <h3 class="text-lg font-bold text-slate-900">특제 저당 생빵가루</h3>
+                                <p class="mt-1 text-slate-500">매일 아침 굽는 전용 식빵을 갈아 만들어 기름을 덜 먹고 압도적인 바삭함을 선사합니다.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 비주얼 영역 -->
+                <div class="mt-12 lg:mt-0 lg:w-1/2 flex justify-center">
+                    <!-- relative를 활용하여 동그라미 안에 이모지 및 뱃지 배치 -->
+                    <div class="relative w-72 h-72 rounded-full bg-slate-50 border-[12px] border-green-50 flex items-center justify-center shadow-2xl">
+                        <span class="text-8xl">🥢</span>
+                        <!-- absolute를 활용한 회전된 말풍선 느낌의 뱃지 -->
+                        <div class="absolute -bottom-4 -right-4 bg-white px-5 py-2 rounded-xl shadow-xl border border-slate-100 font-bold text-green-700 transform rotate-12">
+                            100% 수제
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Section: CSS Grid 기반 적응형 레이아웃 -->
+    <section id="menu" class="py-20 bg-slate-50 flex-grow">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-extrabold text-slate-900">추천 메뉴</h2>
+                <div class="mt-4 h-1.5 w-24 bg-green-600 mx-auto rounded-full"></div>
+            </div>
+
+            <!-- grid, 모바일 1열(grid-cols-1), 테블릿 2열(md:grid-cols-2), PC 3열(lg:grid-cols-3) -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Card 1 -->
+                <div class="bg-white rounded-3xl shadow-sm border border-slate-100 overflow-hidden hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300 relative flex flex-col h-full group">
+                    <!-- Absolute Badge -->
+                    <div class="absolute top-4 left-4 bg-rose-500 text-white text-xs font-bold px-3 py-1 rounded-full z-10 shadow-md">
+                        SIGNATURE
+                    </div>
+                    <div class="h-56 bg-slate-100 flex items-center justify-center text-7xl group-hover:scale-110 transition-transform duration-500">
+                        🐖
+                    </div>
+                    <div class="p-8 flex flex-col flex-grow">
+                        <h3 class="text-2xl font-bold text-slate-900 mb-3">특 로스카츠 (등심)</h3>
+                        <p class="text-slate-600 text-sm flex-grow leading-relaxed">지방과 살코기의 환상적인 비율. 가브리살이 붙어있는 프리미엄 부위로 입안 가득 퍼지는 고소한 육즙이 일품입니다.</p>
+                        <!-- 하단 고정을 위한 margin-top auto, 양쪽 정렬 flex -->
+                        <div class="mt-8 flex justify-between items-center pt-5 border-t border-slate-100">
+                            <span class="text-xl font-bold text-green-700">14,000원</span>
+                            <button class="bg-green-50 hover:bg-green-600 hover:text-white text-green-700 px-5 py-2 rounded-xl text-sm font-bold transition-colors">
+                                주문하기
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="bg-white rounded-3xl shadow-sm border border-slate-100 overflow-hidden hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300 relative flex flex-col h-full group">
+                    <div class="h-56 bg-slate-100 flex items-center justify-center text-7xl group-hover:scale-110 transition-transform duration-500">
+                        🥩
+                    </div>
+                    <div class="p-8 flex flex-col flex-grow">
+                        <h3 class="text-2xl font-bold text-slate-900 mb-3">히레카츠 (안심)</h3>
+                        <p class="text-slate-600 text-sm flex-grow leading-relaxed">지방이 적어 담백하며, 젓가락으로도 찢어질 만큼 극강의 부드러움을 자랑하는 다이어터 추천 메뉴.</p>
+                        <div class="mt-8 flex justify-between items-center pt-5 border-t border-slate-100">
+                            <span class="text-xl font-bold text-green-700">15,000원</span>
+                            <button class="bg-green-50 hover:bg-green-600 hover:text-white text-green-700 px-5 py-2 rounded-xl text-sm font-bold transition-colors">
+                                주문하기
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="bg-white rounded-3xl shadow-sm border border-slate-100 overflow-hidden hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300 relative flex flex-col h-full group">
+                    <!-- Absolute Badge -->
+                    <div class="absolute top-4 left-4 bg-amber-400 text-amber-900 text-xs font-bold px-3 py-1 rounded-full z-10 shadow-md">
+                        POPULAR
+                    </div>
+                    <div class="h-56 bg-slate-100 flex items-center justify-center text-7xl group-hover:scale-110 transition-transform duration-500">
+                        🧀
+                    </div>
+                    <div class="p-8 flex flex-col flex-grow">
+                        <h3 class="text-2xl font-bold text-slate-900 mb-3">통 모짜 치즈카츠</h3>
+                        <p class="text-slate-600 text-sm flex-grow leading-relaxed">신선한 100% 모짜렐라 통치즈가 듬뿍 들어가 고소함이 두 배. 흘러내리는 치즈의 향연을 느껴보세요.</p>
+                        <div class="mt-8 flex justify-between items-center pt-5 border-t border-slate-100">
+                            <span class="text-xl font-bold text-green-700">13,000원</span>
+                            <button class="bg-green-50 hover:bg-green-600 hover:text-white text-green-700 px-5 py-2 rounded-xl text-sm font-bold transition-colors">
+                                주문하기
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer: 하단 정렬 -->
+    <footer class="bg-slate-900 text-slate-400 mt-auto border-t border-slate-800">
+        <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+                <!-- 로고 및 설명 -->
+                <div class="flex flex-col items-center md:items-start">
+                    <span class="text-2xl font-bold text-white tracking-wider">🍱 카츠야</span>
+                    <p class="mt-2 text-sm text-center md:text-left">
+                        장인의 고집으로 튀겨낸 일생일대의 돈까스
+                    </p>
+                </div>
+                <!-- 링크 -->
+                <div class="flex gap-6">
+                    <a href="#" class="hover:text-white transition-colors">이용안내</a>
+                    <a href="#" class="hover:text-white transition-colors">매장찾기</a>
+                    <a href="#" class="hover:text-white transition-colors">가맹문의</a>
+                </div>
+            </div>
+            <div class="mt-10 border-t border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="text-sm">
+                    &copy; 2026 KATSUYA. All rights reserved.
+                </p>
+                <div class="flex gap-4">
+                    <a href="#" class="text-sm hover:text-white transition-colors">개인정보처리방침</a>
+                    <span class="text-slate-700">|</span>
+                    <a href="#" class="text-sm hover:text-white transition-colors">이용약관</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
