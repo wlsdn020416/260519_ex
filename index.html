@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>라멘 가이드 2.0</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" href="favicon/favicon-96x96.png" sizes="96x96">
+  <link rel="icon" type="image/svg+xml" href="favicon/favicon.svg">
+  <link rel="shortcut icon" href="favicon/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+  <link rel="manifest" href="favicon/site.webmanifest">
+</head>
+<body>
+  <div class="site-shell">
+    <header class="glass-nav sticky top-0 z-50">
+      <nav class="mx-auto flex max-w-7xl items-center justify-between px-5 py-3">
+        <a href="index.html" class="brand-logo text-lg font-black tracking-tight text-orange-950"><img src="favicon/favicon.svg" alt="" aria-hidden="true">라멘 가이드 2.0</a>
+        <div class="flex flex-wrap justify-end gap-1 text-sm font-bold">
+          <a class="nav-link active rounded-full px-3 py-2" href="index.html">메인</a>
+          <a class="nav-link rounded-full px-3 py-2" href="ranking.html">추천</a>
+          <a class="nav-link rounded-full px-3 py-2" href="dictionary.html">용어</a>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero-photo relative min-h-[78vh] overflow-hidden">
+        <div class="absolute inset-x-0 bottom-0 h-28 bg-gradient-to-t from-[#fffaf2] to-transparent"></div>
+        <div class="relative mx-auto flex min-h-[78vh] max-w-7xl items-center px-5 py-20">
+          <div class="max-w-2xl text-white">
+            <p class="mb-4 inline-flex rounded-full border border-white/25 bg-white/15 px-4 py-2 text-sm font-bold backdrop-blur">국물, 면, 향의 작은 지도</p>
+            <h1 class="text-5xl font-black leading-tight tracking-normal sm:text-6xl lg:text-7xl">라멘 가이드 2.0</h1>
+            <p class="mt-6 max-w-xl text-lg leading-8 text-orange-50">쇼유의 선명함, 시오의 깔끔함, 미소의 구수함, 돈코츠의 묵직함까지. 한 그릇의 성격을 알고 먹으면 선택이 훨씬 쉬워집니다.</p>
+            <div class="mt-8 flex flex-wrap gap-3">
+              <a href="#taste-finder" class="rounded-full bg-orange-500 px-5 py-3 text-sm font-black text-white shadow-lg shadow-orange-950/20">내 취향 찾기</a>
+              <a href="ranking.html" class="rounded-full border border-white/35 bg-white/10 px-5 py-3 text-sm font-black text-white backdrop-blur">추천 랭킹</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="mx-auto max-w-7xl px-5 py-16">
+        <div class="grid gap-8 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
+          <div>
+            <p class="section-kicker">Ramen World</p>
+            <h2 class="mt-3 text-3xl font-black text-orange-950 sm:text-4xl">라멘은 국물의 언어가 먼저 말합니다</h2>
+            <p class="mt-5 leading-8 text-stone-700">일본 라멘은 빠르게 먹는 한 그릇 식사이면서도 지역, 가게, 조리 철학에 따라 끝없이 갈라지는 음식입니다. 처음에는 국물과 타레의 큰 방향을 잡고, 그 다음 면과 토핑, 주문 방식까지 알면 훨씬 편하게 고를 수 있습니다.</p>
+          </div>
+          <div class="grid grid-cols-2 gap-3 sm:gap-4">
+            <div class="stat-tile rounded-lg p-5">
+              <p class="text-3xl font-black text-orange-700">4</p>
+              <p class="mt-2 text-sm font-bold text-stone-700">대표 스타일</p>
+            </div>
+            <div class="stat-tile rounded-lg p-5">
+              <p class="text-3xl font-black text-orange-700">8</p>
+              <p class="mt-2 text-sm font-bold text-stone-700">응용 라멘</p>
+            </div>
+            <div class="stat-tile rounded-lg p-5">
+              <p class="text-3xl font-black text-orange-700">20+</p>
+              <p class="mt-2 text-sm font-bold text-stone-700">핵심 용어</p>
+            </div>
+            <div class="stat-tile rounded-lg p-5">
+              <p class="text-3xl font-black text-orange-700">1</p>
+              <p class="mt-2 text-sm font-bold text-stone-700">주문 가이드</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="mx-auto max-w-7xl px-5 pb-16">
+        <div class="mb-8 max-w-3xl">
+          <p class="section-kicker">Anatomy</p>
+          <h2 class="mt-3 text-3xl font-black text-orange-950 sm:text-4xl">한 그릇을 이루는 다섯 가지</h2>
+          <p class="mt-5 leading-8 text-stone-700">라멘은 단순히 국물에 면을 넣은 음식이 아니라, 밀국수인 주카멘과 다시, 타레, 향미유, 고명이 층을 이루는 일본식 국수 요리입니다.</p>
+        </div>
+        <div class="grid gap-4 md:grid-cols-2 xl:grid-cols-5">
+          <article class="info-panel rounded-lg p-5">
+            <p class="text-sm font-black text-orange-700">01</p>
+            <h3 class="mt-2 text-xl font-black text-orange-950">주카멘</h3>
+            <p class="mt-3 leading-7 text-stone-700">감수를 넣은 밀국수. 가는 면부터 굵은 면까지 국물 농도에 맞춰 달라집니다.</p>
+          </article>
+          <article class="info-panel rounded-lg p-5">
+            <p class="text-sm font-black text-orange-700">02</p>
+            <h3 class="mt-2 text-xl font-black text-orange-950">다시</h3>
+            <p class="mt-3 leading-7 text-stone-700">닭뼈, 돼지뼈, 해산물 등으로 낸 밑국물. 라멘의 몸통을 만듭니다.</p>
+          </article>
+          <article class="info-panel rounded-lg p-5">
+            <p class="text-sm font-black text-orange-700">03</p>
+            <h3 class="mt-2 text-xl font-black text-orange-950">타레</h3>
+            <p class="mt-3 leading-7 text-stone-700">쇼유, 시오, 미소처럼 간과 방향을 정하는 양념 베이스입니다.</p>
+          </article>
+          <article class="info-panel rounded-lg p-5">
+            <p class="text-sm font-black text-orange-700">04</p>
+            <h3 class="mt-2 text-xl font-black text-orange-950">향미유</h3>
+            <p class="mt-3 leading-7 text-stone-700">마늘, 파, 닭기름 같은 향을 입힌 기름. 첫 향과 질감을 좌우합니다.</p>
+          </article>
+          <article class="info-panel rounded-lg p-5">
+            <p class="text-sm font-black text-orange-700">05</p>
+            <h3 class="mt-2 text-xl font-black text-orange-950">고명</h3>
+            <p class="mt-3 leading-7 text-stone-700">차슈, 멘마, 파, 김, 아지타마처럼 맛과 식감을 완성하는 요소입니다.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="mx-auto max-w-7xl px-5 pb-16">
+        <div class="mb-8 flex flex-col justify-between gap-4 sm:flex-row sm:items-end">
+          <div>
+            <p class="section-kicker">Signature Bowls</p>
+            <h2 class="mt-3 text-3xl font-black text-orange-950">대표 라멘 카드</h2>
+          </div>
+          <a href="ranking.html" class="font-black text-orange-700 hover:text-orange-900">추천 페이지 보기</a>
+        </div>
+        <div class="grid gap-5 md:grid-cols-2 xl:grid-cols-4">
+          <a href="shoyu.html" class="ramen-card block rounded-lg p-6" style="--accent:#92400e; --bowl:#b45309;">
+            <img class="card-photo mb-5" src="assets/ramen-shoyu.png" alt="쇼유 라멘">
+            <h3 class="text-2xl font-black text-orange-950">쇼유 라멘</h3>
+            <p class="mt-3 leading-7 text-stone-700">간장의 향과 닭, 해산물 육수가 어우러지는 클래식한 감칠맛.</p>
+          </a>
+          <a href="shio.html" class="ramen-card block rounded-lg p-6" style="--accent:#0f766e; --bowl:#99f6e4;">
+            <img class="card-photo mb-5" src="assets/ramen-shio.png" alt="시오 라멘">
+            <h3 class="text-2xl font-black text-orange-950">시오 라멘</h3>
+            <p class="mt-3 leading-7 text-stone-700">소금 타레의 맑은 짠맛과 투명한 육수감이 살아나는 가벼운 한 그릇.</p>
+          </a>
+          <a href="miso.html" class="ramen-card block rounded-lg p-6" style="--accent:#b91c1c; --bowl:#dc2626;">
+            <img class="card-photo mb-5" src="assets/ramen-miso.png" alt="미소 라멘">
+            <h3 class="text-2xl font-black text-orange-950">미소 라멘</h3>
+            <p class="mt-3 leading-7 text-stone-700">된장의 구수함, 볶은 야채, 두툼한 풍미가 만드는 든든한 맛.</p>
+          </a>
+          <a href="tonkotsu.html" class="ramen-card block rounded-lg p-6" style="--accent:#57534e; --bowl:#e7e5e4;">
+            <img class="card-photo mb-5" src="assets/ramen-tonkotsu.png" alt="돈코츠 라멘">
+            <h3 class="text-2xl font-black text-orange-950">돈코츠 라멘</h3>
+            <p class="mt-3 leading-7 text-stone-700">돼지뼈를 오래 끓인 농도와 지방감이 강한 진한 스타일.</p>
+          </a>
+        </div>
+      </section>
+
+      <section class="mx-auto max-w-7xl px-5 pb-16">
+        <div class="info-panel rounded-lg p-6 sm:p-8">
+          <div class="grid gap-8 lg:grid-cols-[0.8fr_1.2fr] lg:items-start">
+            <div>
+              <p class="section-kicker">Regional Map</p>
+              <h2 class="mt-3 text-3xl font-black text-orange-950">지역마다 다른 라멘의 얼굴</h2>
+              <p class="mt-5 leading-8 text-stone-700">라멘은 일본 안에서도 지역색이 강합니다. 홋카이도, 도쿄, 요코하마, 규슈처럼 지역마다 국물과 토핑의 기준점이 달라집니다.</p>
+            </div>
+            <div class="grid gap-3 sm:grid-cols-2">
+              <div class="rounded-lg bg-white/70 p-5"><p class="font-black text-orange-900">홋카이도</p><p class="mt-2 leading-7 text-stone-700">삿포로 미소, 하코다테 시오처럼 추운 지역의 든든하고 선명한 스타일.</p></div>
+              <div class="rounded-lg bg-white/70 p-5"><p class="font-black text-orange-900">도쿄</p><p class="mt-2 leading-7 text-stone-700">쇼유 기반의 중화소바 계열이 대표적인 클래식한 방향.</p></div>
+              <div class="rounded-lg bg-white/70 p-5"><p class="font-black text-orange-900">요코하마</p><p class="mt-2 leading-7 text-stone-700">돼지뼈 간장 국물, 굵은 면, 김과 시금치가 특징인 이에케.</p></div>
+              <div class="rounded-lg bg-white/70 p-5"><p class="font-black text-orange-900">규슈</p><p class="mt-2 leading-7 text-stone-700">하카타와 구루메로 이어지는 진한 돈코츠 계열의 중심지.</p></div>
+              <div class="rounded-lg bg-white/70 p-5"><p class="font-black text-orange-900">돗토리</p><p class="mt-2 leading-7 text-stone-700">쇠고기 육수를 쓰는 개성파 지역 라멘으로 알려져 있습니다.</p></div>
+              <div class="rounded-lg bg-white/70 p-5"><p class="font-black text-orange-900">덴리</p><p class="mt-2 leading-7 text-stone-700">채소를 듬뿍 넣은 스태미나 라멘처럼 힘 있는 스타일이 대표적입니다.</p></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="mx-auto max-w-7xl px-5 pb-16">
+        <div class="grid gap-5 lg:grid-cols-[1fr_1fr]">
+          <article class="info-panel rounded-lg p-6 sm:p-8">
+            <p class="section-kicker">How To Order</p>
+            <h2 class="mt-3 text-3xl font-black text-orange-950">라멘집 주문 흐름</h2>
+            <div class="mt-6 grid gap-3">
+              <p class="rounded-lg bg-white/70 p-4"><b>1. 식권 자판기</b><br>돈을 넣고 라멘, 토핑, 사이드를 고른 뒤 식권을 직원에게 건넵니다.</p>
+              <p class="rounded-lg bg-white/70 p-4"><b>2. 취향 조절</b><br>면 굵기, 익힘, 마늘, 기름, 간 조절을 묻는 가게도 있습니다.</p>
+              <p class="rounded-lg bg-white/70 p-4"><b>3. 사이드 선택</b><br>교자, 볶음밥, 가라아게, 맥주는 라멘과 자주 맞추는 조합입니다.</p>
+            </div>
+          </article>
+          <article class="info-panel rounded-lg p-6 sm:p-8">
+            <p class="section-kicker">Eating Etiquette</p>
+            <h2 class="mt-3 text-3xl font-black text-orange-950">먹을 때 알아두면 편한 것</h2>
+            <div class="mt-6 grid gap-3">
+              <p class="rounded-lg bg-white/70 p-4"><b>후루룩 먹기</b><br>면을 소리 내어 먹는 것은 무례한 행동으로 보지 않는 편입니다.</p>
+              <p class="rounded-lg bg-white/70 p-4"><b>국물은 선택</b><br>국물을 다 마셔도 괜찮지만, 면과 토핑만 먹고 남겨도 됩니다.</p>
+              <p class="rounded-lg bg-white/70 p-4"><b>회전 빠른 식사</b><br>대기 줄이 긴 가게라면 식사 후 오래 머물지 않는 편이 좋습니다.</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="mx-auto max-w-7xl px-5 pb-16">
+        <div class="mb-8 max-w-3xl">
+          <p class="section-kicker">Beyond Basics</p>
+          <h2 class="mt-3 text-3xl font-black text-orange-950">네 가지 이후에 만나는 라멘</h2>
+          <p class="mt-5 leading-8 text-stone-700">쇼유, 시오, 미소, 돈코츠에 익숙해졌다면 먹는 방식과 육수 재료가 다른 응용 스타일로 넓혀볼 수 있습니다.</p>
+        </div>
+        <div class="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
+          <article class="info-panel rounded-lg p-5"><h3 class="text-xl font-black text-orange-950">츠케멘</h3><p class="mt-3 leading-7 text-stone-700">면과 진한 찍먹 국물이 따로 나오는 스타일.</p></article>
+          <article class="info-panel rounded-lg p-5"><h3 class="text-xl font-black text-orange-950">아부라소바</h3><p class="mt-3 leading-7 text-stone-700">국물보다 타레와 기름으로 비벼 먹는 라멘.</p></article>
+          <article class="info-panel rounded-lg p-5"><h3 class="text-xl font-black text-orange-950">탄탄멘</h3><p class="mt-3 leading-7 text-stone-700">참깨, 고추기름, 다진 고기의 매콤하고 고소한 조합.</p></article>
+          <article class="info-panel rounded-lg p-5"><h3 class="text-xl font-black text-orange-950">이에케</h3><p class="mt-3 leading-7 text-stone-700">요코하마식 돼지뼈 간장 라멘. 굵은 면과 김이 특징.</p></article>
+          <article class="info-panel rounded-lg p-5"><h3 class="text-xl font-black text-orange-950">카라미소</h3><p class="mt-3 leading-7 text-stone-700">미소 라멘에 매운 된장 양념을 더한 스타일.</p></article>
+          <article class="info-panel rounded-lg p-5"><h3 class="text-xl font-black text-orange-950">토리파이탄</h3><p class="mt-3 leading-7 text-stone-700">닭을 진하게 끓여 뽀얗고 크리미한 국물을 냅니다.</p></article>
+          <article class="info-panel rounded-lg p-5"><h3 class="text-xl font-black text-orange-950">교카이</h3><p class="mt-3 leading-7 text-stone-700">어패류와 건어물 향이 강한 해산물 계열.</p></article>
+          <article class="info-panel rounded-lg p-5"><h3 class="text-xl font-black text-orange-950">완탕멘</h3><p class="mt-3 leading-7 text-stone-700">완탕 토핑으로 부드러운 식감을 더한 라멘.</p></article>
+        </div>
+      </section>
+
+      <section class="mx-auto max-w-7xl px-5 pb-16">
+        <div class="info-panel rounded-lg p-6 sm:p-8">
+          <p class="section-kicker">Shop Check</p>
+          <h2 class="mt-3 text-3xl font-black text-orange-950">라멘집 고를 때 보는 신호</h2>
+          <div class="mt-6 grid gap-3 md:grid-cols-2 xl:grid-cols-4">
+            <p class="rounded-lg bg-white/70 p-4"><b>메뉴가 좁다</b><br>한두 국물에 집중한 가게는 맛의 기준이 선명한 편입니다.</p>
+            <p class="rounded-lg bg-white/70 p-4"><b>지역 라멘이 있다</b><br>삿포로, 하카타, 이에케처럼 출신이 분명하면 고르기 쉽습니다.</p>
+            <p class="rounded-lg bg-white/70 p-4"><b>식권 자판기</b><br>일본식 라멘집 분위기와 회전 빠른 운영을 보여주는 요소입니다.</p>
+            <p class="rounded-lg bg-white/70 p-4"><b>줄이 길다</b><br>대기 줄은 절대 기준은 아니지만 현지 인기의 단서가 될 수 있습니다.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="taste-finder" class="mx-auto max-w-7xl px-5 pb-20">
+        <div class="info-panel rounded-lg p-6 sm:p-8">
+          <p class="section-kicker">Taste Finder</p>
+          <h2 class="mt-3 text-3xl font-black text-orange-950">내 취향 라멘 찾기</h2>
+          <div class="mt-8 grid gap-4 lg:grid-cols-4">
+            <div class="rounded-lg bg-white/70 p-5">
+              <p class="font-black text-orange-900">처음이라면</p>
+              <p class="mt-2 text-sm leading-6 text-stone-700">쇼유 또는 시오. 향이 또렷하고 부담이 적습니다.</p>
+            </div>
+            <div class="rounded-lg bg-white/70 p-5">
+              <p class="font-black text-orange-900">진한 국물이 좋다면</p>
+              <p class="mt-2 text-sm leading-6 text-stone-700">돈코츠. 꾸덕한 질감과 묵직한 감칠맛이 강합니다.</p>
+            </div>
+            <div class="rounded-lg bg-white/70 p-5">
+              <p class="font-black text-orange-900">구수한 맛을 원하면</p>
+              <p class="mt-2 text-sm leading-6 text-stone-700">미소. 된장 풍미와 볶은 향이 포만감을 줍니다.</p>
+            </div>
+            <div class="rounded-lg bg-white/70 p-5">
+              <p class="font-black text-orange-900">깔끔한 마무리라면</p>
+              <p class="mt-2 text-sm leading-6 text-stone-700">시오. 맑고 담백해서 토핑 맛도 잘 보입니다.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+  <meta property="og:title" content="라멘에 대하여">
+    <meta property="og:description" content="https://wlsdn020416.github.io/260518_ex/">
+    <meta property="og:image" content="https://wlsdn020416.github.io/260518_ex/og_preview.png">
+</body>
+</html>

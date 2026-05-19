@@ -1,0 +1,352 @@
+@font-face {
+  font-family: "NostalgicPoliceVibe";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/2601-6@1.0/Griun_PolSensibility-Rg.woff2") format("woff2");
+  font-weight: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "JoseonPalace";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@1.0/ChosunGs.woff") format("woff");
+  font-weight: normal;
+  font-display: swap;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "JoseonPalace", "Noto Sans KR", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background:
+    radial-gradient(circle at top left, rgba(244, 114, 32, 0.14), transparent 32rem),
+    linear-gradient(180deg, #fffaf2 0%, #f7efe3 52%, #fffaf2 100%);
+  color: #251a12;
+}
+
+h1,
+h2,
+h3,
+nav,
+button,
+.section-kicker,
+.badge,
+.font-black,
+.font-bold {
+  font-family: "NostalgicPoliceVibe", "JoseonPalace", "Noto Sans KR", system-ui, sans-serif;
+}
+
+.site-shell {
+  min-height: 100vh;
+}
+
+.hero-photo {
+  background-image:
+    linear-gradient(90deg, rgba(22, 14, 8, 0.82), rgba(22, 14, 8, 0.42), rgba(22, 14, 8, 0.08)),
+    url("assets/ramen-hero.png");
+  background-position: center;
+  background-size: cover;
+}
+
+.glass-nav {
+  background: rgba(255, 250, 242, 0.82);
+  backdrop-filter: blur(18px);
+  border-bottom: 1px solid rgba(120, 74, 36, 0.12);
+}
+
+.brand-logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+}
+
+.brand-logo img {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 0.45rem;
+  box-shadow: 0 8px 18px rgba(87, 55, 32, 0.14);
+}
+
+.nav-link {
+  color: #5f4634;
+  transition: color 160ms ease, background 160ms ease;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: #9a3412;
+  background: rgba(154, 52, 18, 0.08);
+}
+
+.section-kicker {
+  color: #b45309;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.ramen-card {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(120, 74, 36, 0.14);
+  background: rgba(255, 253, 247, 0.86);
+  box-shadow: 0 20px 60px rgba(87, 55, 32, 0.08);
+  transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
+}
+
+.ramen-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(180, 83, 9, 0.34);
+  box-shadow: 0 26px 70px rgba(87, 55, 32, 0.13);
+}
+
+.ramen-card::before {
+  content: "";
+  position: absolute;
+  inset: 0 auto auto 0;
+  width: 0.45rem;
+  height: 100%;
+  background: var(--accent, #d97706);
+}
+
+.card-photo {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  border-radius: 0.5rem;
+  object-fit: cover;
+  object-position: center;
+  border: 1px solid rgba(120, 74, 36, 0.13);
+  box-shadow: 0 16px 32px rgba(87, 55, 32, 0.12);
+}
+
+.stat-tile,
+.info-panel {
+  border: 1px solid rgba(120, 74, 36, 0.14);
+  background: rgba(255, 253, 247, 0.8);
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  border-radius: 999px;
+  border: 1px solid rgba(120, 74, 36, 0.14);
+  background: rgba(255, 255, 255, 0.55);
+  padding: 0.45rem 0.75rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #6b3d1d;
+}
+
+.broth-ring {
+  position: relative;
+  display: grid;
+  place-items: center;
+  aspect-ratio: 1;
+  border-radius: 999px;
+  background:
+    radial-gradient(circle at 50% 48%, rgba(255, 255, 255, 0.92) 0 12%, transparent 13%),
+    radial-gradient(circle at 66% 34%, rgba(251, 191, 36, 0.9) 0 7%, transparent 8%),
+    radial-gradient(circle at 36% 62%, rgba(120, 53, 15, 0.76) 0 12%, transparent 13%),
+    radial-gradient(circle, var(--bowl, #d97706), #5b2b11 72%);
+  box-shadow: inset 0 0 0 14px rgba(255, 255, 255, 0.5), 0 18px 45px rgba(79, 45, 23, 0.16);
+}
+
+.detail-hero {
+  background:
+    radial-gradient(circle at top right, var(--glow, rgba(217, 119, 6, 0.18)), transparent 24rem),
+    rgba(255, 253, 247, 0.78);
+}
+
+.dictionary-term {
+  border-left: 0.35rem solid #d97706;
+}
+
+@media (max-width: 767px) {
+  body {
+    background:
+      radial-gradient(circle at 16% 0%, rgba(244, 114, 32, 0.2), transparent 18rem),
+      radial-gradient(circle at 100% 28%, rgba(15, 118, 110, 0.1), transparent 14rem),
+      linear-gradient(180deg, #fffaf2 0%, #f7efe3 58%, #fffaf2 100%);
+  }
+
+  .glass-nav nav {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 0.65rem;
+    padding-inline: 1rem;
+  }
+
+  .glass-nav nav > a {
+    font-size: 1.08rem;
+  }
+
+  .brand-logo img {
+    width: 1.9rem;
+    height: 1.9rem;
+  }
+
+  .glass-nav nav > div {
+    width: 100%;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    overflow-x: auto;
+    padding-bottom: 0.1rem;
+    scrollbar-width: none;
+  }
+
+  .glass-nav nav > div::-webkit-scrollbar {
+    display: none;
+  }
+
+  .nav-link {
+    flex: 0 0 auto;
+    background: rgba(255, 255, 255, 0.38);
+    border: 1px solid rgba(120, 74, 36, 0.1);
+  }
+
+  .hero-photo {
+    background-image:
+      linear-gradient(90deg, rgba(22, 14, 8, 0.88), rgba(22, 14, 8, 0.56), rgba(22, 14, 8, 0.18)),
+      url("assets/ramen-hero.png");
+    background-position: 58% center;
+    min-height: 76vh;
+  }
+
+  .hero-photo > .relative {
+    align-items: flex-end;
+    min-height: 76vh;
+    padding: 7.25rem 1rem 4.25rem;
+  }
+
+  .hero-photo h1 {
+    max-width: 11ch;
+    font-size: clamp(2.65rem, 13vw, 4.9rem);
+    line-height: 0.98;
+  }
+
+  .hero-photo p {
+    max-width: 30rem;
+  }
+
+  .hero-photo .inline-flex {
+    max-width: 100%;
+  }
+
+  main > section {
+    padding-inline: 1rem;
+  }
+
+  h1 {
+    font-size: clamp(2.45rem, 10vw, 3.75rem) !important;
+    line-height: 1.04;
+  }
+
+  h2 {
+    line-height: 1.08;
+  }
+
+  .ramen-card {
+    display: grid !important;
+    grid-template-columns: minmax(5.8rem, 7.2rem) minmax(0, 1fr);
+    grid-template-rows: auto auto;
+    column-gap: 1rem;
+    align-items: center;
+    padding: 1.1rem !important;
+    min-height: 9.25rem;
+  }
+
+  .ramen-card::before {
+    width: 0.32rem;
+  }
+
+  .ramen-card .broth-ring {
+    grid-row: 1 / span 2;
+    margin: 0 !important;
+    width: 100%;
+  }
+
+  .ramen-card .card-photo {
+    grid-row: 1 / span 2;
+    margin: 0 !important;
+    width: 100%;
+    height: 100%;
+    min-height: 7.1rem;
+    aspect-ratio: 1;
+  }
+
+  .ramen-card h3 {
+    font-size: 1.55rem;
+    line-height: 1.05;
+  }
+
+  .ramen-card p {
+    margin-top: 0.35rem;
+    font-size: 0.98rem;
+    line-height: 1.55;
+  }
+
+  .stat-tile,
+  .info-panel {
+    background: rgba(255, 253, 247, 0.88);
+    box-shadow: 0 18px 48px rgba(87, 55, 32, 0.07);
+  }
+
+  .detail-hero {
+    grid-template-columns: minmax(0, 1fr) minmax(6.7rem, 8.6rem) !important;
+    align-items: center;
+    padding: 1.25rem !important;
+  }
+
+  .detail-hero p:first-child {
+    grid-column: 1 / -1;
+  }
+
+  .detail-hero h1 {
+    grid-column: 1;
+    grid-row: 2;
+    max-width: 8ch;
+  }
+
+  .detail-hero .broth-ring {
+    grid-column: 2;
+    grid-row: 2;
+    width: 100%;
+  }
+
+  .detail-hero > div:first-child {
+    display: contents;
+  }
+
+  .detail-hero > div:first-child > p:last-child {
+    grid-column: 1 / -1;
+    margin-top: 0.75rem;
+  }
+
+  .badge {
+    padding: 0.48rem 0.72rem;
+  }
+}
+
+@media (min-width: 430px) and (max-width: 767px) {
+  #taste-finder .grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 390px) {
+  .ramen-card {
+    grid-template-columns: 5.4rem minmax(0, 1fr);
+    column-gap: 0.85rem;
+  }
+
+  .ramen-card h3 {
+    font-size: 1.38rem;
+  }
+
+  .ramen-card p {
+    font-size: 0.92rem;
+  }
+}

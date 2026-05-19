@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>추천 랭킹 | 라멘 가이드 2.0</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" href="favicon/favicon-96x96.png" sizes="96x96">
+  <link rel="icon" type="image/svg+xml" href="favicon/favicon.svg">
+  <link rel="shortcut icon" href="favicon/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+  <link rel="manifest" href="favicon/site.webmanifest">
+</head>
+<body>
+  <header class="glass-nav sticky top-0 z-50"><nav class="mx-auto flex max-w-7xl items-center justify-between px-5 py-3"><a href="index.html" class="brand-logo text-lg font-black text-orange-950"><img src="favicon/favicon.svg" alt="" aria-hidden="true">라멘 가이드 2.0</a><div class="flex gap-1 text-sm font-bold"><a class="nav-link rounded-full px-3 py-2" href="index.html">메인</a><a class="nav-link active rounded-full px-3 py-2" href="ranking.html">추천</a><a class="nav-link rounded-full px-3 py-2" href="dictionary.html">용어</a></div></nav></header>
+  <main class="mx-auto max-w-7xl px-5 py-12">
+    <section class="mb-10">
+      <p class="section-kicker">Ranking</p>
+      <h1 class="mt-3 text-4xl font-black text-orange-950 sm:text-5xl">추천과 랭킹</h1>
+      <p class="mt-5 max-w-3xl leading-8 text-stone-700">처음 먹는 사람, 진한 국물파, 깔끔한 맛파처럼 상황별로 고르기 쉽게 정리했습니다.</p>
+    </section>
+    <section class="grid gap-5 lg:grid-cols-2">
+      <article class="info-panel rounded-lg p-6">
+        <h2 class="text-2xl font-black">입문자 추천 TOP 5</h2>
+        <ol class="mt-5 space-y-3 text-stone-700"><li><b>1. 쇼유 라멘</b> - 기본기가 가장 잘 보이는 안정적인 선택</li><li><b>2. 시오 라멘</b> - 가볍고 맑아 부담이 적음</li><li><b>3. 미소 라멘</b> - 구수하고 직관적인 맛</li><li><b>4. 차슈 쇼유</b> - 고기 토핑으로 만족감 상승</li><li><b>5. 약한 돈코츠</b> - 진한 국물 입문용</li></ol>
+      </article>
+      <article class="info-panel rounded-lg p-6">
+        <h2 class="text-2xl font-black">진한 맛 추천</h2>
+        <div class="mt-5 flex flex-wrap gap-2"><span class="badge">돈코츠</span><span class="badge">미소</span><span class="badge">이에케</span><span class="badge">매운 미소</span></div>
+        <p class="mt-5 leading-7 text-stone-700">국물 농도, 향미유, 된장 또는 돼지뼈 감칠맛을 중요하게 보는 사람에게 잘 맞습니다.</p>
+      </article>
+      <article class="info-panel rounded-lg p-6">
+        <h2 class="text-2xl font-black">깔끔한 맛 추천</h2>
+        <div class="mt-5 flex flex-wrap gap-2"><span class="badge">시오</span><span class="badge">쇼유</span><span class="badge">조개 라멘</span><span class="badge">탄레이</span></div>
+        <p class="mt-5 leading-7 text-stone-700">맑은 국물, 산뜻한 향, 재료 본연의 맛을 즐기는 취향이라면 이쪽이 좋습니다.</p>
+      </article>
+      <article class="info-panel rounded-lg p-6">
+        <h2 class="text-2xl font-black">매운 라멘 추천</h2>
+        <div class="mt-5 flex flex-wrap gap-2"><span class="badge">매운 미소</span><span class="badge">탄탄멘</span><span class="badge">카라미소</span><span class="badge">마라 라멘</span></div>
+        <p class="mt-5 leading-7 text-stone-700">매운맛만 강한 것보다 된장, 참깨, 향신료가 받쳐주는 스타일이 라멘답게 즐기기 좋습니다.</p>
+      </article>
+      <article class="info-panel rounded-lg p-6 lg:col-span-2">
+        <h2 class="text-2xl font-black">차슈 좋아하는 사람 추천</h2>
+        <div class="mt-5 grid gap-3 sm:grid-cols-3"><p class="rounded-lg bg-white/70 p-4"><b>차슈 쇼유</b><br>간장 국물과 고기 향의 균형</p><p class="rounded-lg bg-white/70 p-4"><b>돈코츠 차슈멘</b><br>진한 국물과 지방감의 조합</p><p class="rounded-lg bg-white/70 p-4"><b>아부라소바</b><br>비빔 스타일로 고기 맛이 직접적</p></div>
+      </article>
+      <article class="info-panel rounded-lg p-6 lg:col-span-2">
+        <h2 class="text-2xl font-black">라멘 분류 빠른 표</h2>
+        <div class="mt-5 grid gap-3 md:grid-cols-2 xl:grid-cols-4">
+          <p class="rounded-lg bg-white/70 p-4"><b>타레 기준</b><br>쇼유, 시오, 미소, 카레처럼 간의 방향으로 나눕니다.</p>
+          <p class="rounded-lg bg-white/70 p-4"><b>육수 기준</b><br>돈코츠, 닭뼈, 해산물처럼 밑국물 재료로 나눕니다.</p>
+          <p class="rounded-lg bg-white/70 p-4"><b>고명 기준</b><br>차슈멘, 완탕멘처럼 올라가는 재료가 이름이 됩니다.</p>
+          <p class="rounded-lg bg-white/70 p-4"><b>방식 기준</b><br>츠케멘, 냉라멘처럼 먹는 방식이나 온도로 구분합니다.</p>
+        </div>
+      </article>
+      <article class="info-panel rounded-lg p-6 lg:col-span-2">
+        <h2 class="text-2xl font-black">취향 진단 빠른 선택</h2>
+        <div class="mt-5 grid gap-3 md:grid-cols-2 xl:grid-cols-3">
+          <p class="rounded-lg bg-white/70 p-4"><b>깔끔한 맛</b><br>시오, 조개 라멘, 탄레이 쇼유</p>
+          <p class="rounded-lg bg-white/70 p-4"><b>진한 맛</b><br>돈코츠, 이에케, 토리파이탄</p>
+          <p class="rounded-lg bg-white/70 p-4"><b>짭짤한 감칠맛</b><br>쇼유, 차슈 쇼유, 완탕멘</p>
+          <p class="rounded-lg bg-white/70 p-4"><b>고소한 맛</b><br>미소, 탄탄멘, 버터 콘 미소</p>
+          <p class="rounded-lg bg-white/70 p-4"><b>매운 맛</b><br>카라미소, 탄탄멘, 매운 돈코츠</p>
+          <p class="rounded-lg bg-white/70 p-4"><b>고기 많은 맛</b><br>차슈멘, 돈코츠 차슈, 이에케 노리 추가</p>
+        </div>
+      </article>
+    </section>
+  </main>
+</body>
+</html>
