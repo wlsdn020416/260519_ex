@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Block Inline</title>
+    <style>
+        div{
+            background-color: aquamarine;
+            width:150px ;
+            height: 50px;
+            margin: 15px;
+            padding: 15px;
+        }
+        span{
+        background-color: pink;
+            width:150px ;
+            height: 50px;
+            margin: 15px;
+            padding: 15px;    
+        }
+        .block{
+            display: block;
+        }
+        .inline{
+            display: inline;
+        }
+        .inline-block{
+            display: inline-block;
+        }
+        .container{
+            width:100%;
+            height:100%;
+            background-color: transparent;
+        }
+    </style>
+</head>
+<body>
+    <div> b1 </div>
+    <div> b2 </div>
+    <span> i1 </span>
+    <span> i2 </span>
+    <div class="inline"> b4 </div>
+    <span class="block"> b3 </span>
+    <div class="inline-block"> b5 </div>
+    <div class="inline-block"> b6 </div>
+    <div style="display: none"> c1 </div>
+    <div> b2 </div>
+    <div style="visibility: hidden"> c2 </div>
+    <div> c2 </div>
+    <hr>
+    <div class="container"> header: 사이트의 설명 </div>
+    <div class="container"> nav </div>
+    <div class="container"> main </div>
+    <div class="container"> footer </div>
+    <br>
+    <br>
+    <br>
+    <hr>
+    <section>
+        <!-- 하나로 묶음의 요소 div -->
+         <!-- 화면 구성과 레이아웃 section -->
+        <header>라멘 이야기</header>
+        <nav><button>미소라멘</button> 소유라멘 돈코츠라멘</nav>
+        <main><aside>광고</aside></main>
+        <footer>저작권</footer>
+    </section>
+</body>
+</html>

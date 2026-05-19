@@ -11,12 +11,19 @@
             border: 5px solid green;
             padding:20px;
             margin: 20px;
+            /* 기본값 */
+            /* box-sizing: contentbox */
         }
     </style>
 </head>
 <body>
     <p> 기본 위아래 여백 존재 </p>
-    <div> div </div>
-    한줄을 다 차지
+    <h2>content-box</h2>
+    <div> 250 * 150 </div>
+    <p>(200+20*2+5*2) * (100+20*2+5*2)</p>
+    <span>한줄을 다 차지</span>
+    <h2>border-box</h2>
+    <div style="box-sizing: border-box;">200 * 100</div>
+    <p>(20*2+5*2+150) * (20*2+5*2+50)</p>
 </body>
 </html>
